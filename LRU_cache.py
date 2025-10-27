@@ -44,7 +44,7 @@ class LRUCache(object):
             if self.map.get(key) is None:
                 # Remove least used item (front of queue) from queue and map, add new value
                 item = self.queue.pop(0)
-                print(item)
+                # print(item)
                 self.map.pop(item)
                 self.map[key] = value
                 self.queue.append(key)
@@ -52,7 +52,7 @@ class LRUCache(object):
             else:
                 # Loop through queue and remove key then add it back to end of queue (LRU)
                 for i in range(0, len(self.queue)):
-                    if self.queue[i] is key:
+                    if self.queue[i] == key:
                         self.queue.pop(i)
                         break
                 self.queue.append(key)
@@ -60,7 +60,7 @@ class LRUCache(object):
         else:
             # Loop through queue and remove key then add it back to end of queue (LRU)
             for i in range(0, len(self.queue)):
-                if self.queue[i] is key:
+                if self.queue[i] == key:
                     self.queue.pop(i)
                     break
             self.queue.append(key)
