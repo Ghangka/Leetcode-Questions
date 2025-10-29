@@ -3,7 +3,7 @@
 # O(n) space complexity
 
 class Solution:
-    def groupAnagrams(self, strs: list[str]) -> list[list[str]]:
+    def group_anagrams(self, strs: list[str]) -> list[list[str]]:
         res = defaultdict(list)
         for s in strs:
             count = [0] * 26
