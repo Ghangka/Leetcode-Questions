@@ -4,7 +4,7 @@
 
 # Bucket Sort Algorithm
 class Solution:
-    def topKFrequent(self, nums: list[int], k: int) -> list[int]:
+    def top_k_frequent(self, nums: list[int], k: int) -> list[int]:
         count = {}
         freq = [[] for i in range(len(nums) + 1)]
         for n in nums:

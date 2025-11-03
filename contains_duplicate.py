@@ -3,7 +3,7 @@
 # O(n) space complexity
 
 class Solution:
-    def hasDuplicate(self, nums: list[int]) -> bool:
+    def has_duplicate(self, nums: list[int]) -> bool:
 
         hashMap = {}
 

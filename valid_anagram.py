@@ -1,7 +1,7 @@
 # https://leetcode.com/problems/valid-anagram/
 
 class Solution:
-    def isAnagram(self, s: str, t: str) -> bool:
+    def is_anagram(self, s: str, t: str) -> bool:
         # O(n log n) time complexity
         # O(1) space complexity
         # if len(s) != len(t):
