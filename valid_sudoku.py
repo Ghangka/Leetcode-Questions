@@ -1,3 +1,6 @@
+# https://leetcode.com/problems/valid-sudoku/
+# O(n^2) time complexity
+# O(n) space complexity
 class Solution:
     def is_valid_sudoku(self, board: list[list[str]]) -> bool:
         # Row case
