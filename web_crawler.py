@@ -16,6 +16,7 @@
 # E -> s = number of urls from one url (for loop line 19)
 # c = length of page content
 
+# Iterative Implementation
 class WebCrawler:
     def __init__(self):
         self.visited_urls = set()
@@ -48,3 +49,28 @@ class WebCrawler:
     def get_links_on_page(self, html: str) -> list[str]:
         # This is a placeholder for the actual implementation
         return ["link1", "link2", "link3"]
+
+# Recursive Implementation
+class WebCrawlerRecursive:
+    def __init__(self):
+        self.visited_urls = set()
+
+    def web_crawl(self, url: str) -> list[str]:
+        if url in self.visited_urls:
+            return list(self.visited_urls)
+        
+        self.visited_urls.add(url)
+        html = self.get_html_content(url)
+        links = self.get_links_on_page(html)
+        for link in links:
+            if link not in self.visited_urls:
+                self.web_crawl(link)
+        return list(self.visited_urls)
+
+    def get_html_content(self, url: str) -> str:
+        # This is a placeholder for the actual implementation
+        return "html content"
+    
+    def get_links_on_page(self, html: str) -> list[str]:
+        # This is a placeholder for the actual implementation
+        return ["link1", "link2", "link3"]  
