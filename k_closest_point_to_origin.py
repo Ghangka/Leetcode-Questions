@@ -1,13 +1,15 @@
 # https://neetcode.io/problems/k-closest-points-to-origin?list=neetcode150
 
-# Runtime and Space Complexity:
-# 
+
 
 import math
 import heapq
 from typing import List
 
 # Iteration 1
+# Runtime and Space Complexity:
+# Runtime: O(n) where n is the length of the points array
+# Space: O(n) where n is the length of the points array
 class Solution:
     def k_closest(self, points: List[List[int]], k: int) -> List[List[int]]:
         distances = [0 for i in range(len(points))]
@@ -39,6 +41,9 @@ class Solution:
         return result
 
 # Iteration 2
+# Runtime and Space Complexity:
+# Runtime: O(n) where n is the length of the points array
+# Space: O(n) where n is the length of the points array
 class Solution:
     def k_closest(self, points: List[List[int]], k: int) -> List[List[int]]:
         min_heap = []
