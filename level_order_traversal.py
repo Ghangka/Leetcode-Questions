@@ -1,7 +1,7 @@
 # https://neetcode.io/problems/level-order-traversal-of-binary-tree?list=neetcode150
 
 # Runtime: O(n)
-# Space: O(2n) - 2 arrays of length n max
+# Space: O(n) -> O(2n) - 2 arrays of length n max, simplifies to O(n)
 
 # Definition for a binary tree node.
 from ast import List
@@ -23,30 +23,21 @@ class Solution:
         queue.append(root)
         
         result = []
-        result.append([root.val])
 
         while len(queue) > 0:
-            curr_queue = queue.copy() 
-            # curr_queue = queue
+            level_size = len(queue)
             curr_list = []
-
-            while len(curr_queue) > 0:
-                curr = curr_queue.pop(0)
-                # print("queue, curr, curr_queue", queue, curr, curr_queue)
-                pop = queue.pop(0)
-
-                if curr is None:
-                    continue
-                
-                if curr.left is not None:
-                    curr_list.append(curr.left.val)
-                    queue.append(curr.left)
-                if curr.right is not None:
-                    curr_list.append(curr.right.val)
-                    queue.append(curr.right)
             
-            if len(curr_list) != 0:
-                result.append(curr_list)
+            for _ in range(level_size):
+                node = queue.pop(0)
+                curr_list.append(node.val)
+
+                if node.left:
+                    queue.append(node.left)
+                if node.right:
+                    queue.append(node.right)
+                
+            result.append(curr_list)
 
         return result
 
