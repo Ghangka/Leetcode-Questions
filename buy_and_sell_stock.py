@@ -7,7 +7,7 @@ from typing import List
 
 
 class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
+    def max_profit(self, prices: List[int]) -> int:
         profit = 0
         min = prices[0]
 
