@@ -8,7 +8,7 @@ from typing import List
 
 # Iteration 1
 # Runtime and Space Complexity:
-# Runtime: O(n) where n is the length of the points array
+# Runtime: O(nlogn) where n is the length of the points array
 # Space: O(n) where n is the length of the points array
 class Solution:
     def k_closest(self, points: List[List[int]], k: int) -> List[List[int]]:
@@ -42,7 +42,7 @@ class Solution:
 
 # Iteration 2
 # Runtime and Space Complexity:
-# Runtime: O(n) where n is the length of the points array
+# Runtime: O(nlogn) where n is the length of the points array
 # Space: O(n) where n is the length of the points array
 class Solution:
     def k_closest(self, points: List[List[int]], k: int) -> List[List[int]]:
