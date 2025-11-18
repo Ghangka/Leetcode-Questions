@@ -1,6 +1,6 @@
 # https://neetcode.io/problems/kth-largest-element-in-an-array?list=neetcode150 
 # Runtime & Space Complexity:
-# Runtime: O(n)
+# Runtime: O(n log n)
 # Space: O(n)
 
 import heapq
