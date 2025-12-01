@@ -12,7 +12,7 @@ class TreeNode:
 # Runtime: O(n + k log n) due to heapify and heappop
 # Space: O(n) where n is the number of nodes in the tree
 class BST:
-    def kth_smallest(self, root: Optional[TreeNode]) -> int:
+    def kth_smallest(self, root: Optional[TreeNode], k:int) -> int:
         if root is None:
             return -1
         
