@@ -4,8 +4,8 @@ from typing import List
 # Runtime: O(n * m * 4^l)
 # Space: O(l)
 
-class Solution:
-    def exist(self, board: List[List[str]], word: str) -> bool:
+class WordSearch:
+    def find_word(self, board: List[List[str]], word: str) -> bool:
         ROWS, COLS = len(board), len(board[0])
         # Keep track of the path to avoid revisiting the same cell
         path = set()
