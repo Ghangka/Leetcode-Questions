@@ -1,5 +1,10 @@
+# https://neetcode.io/problems/search-for-word-ii/question?list=blind75
 from typing import List
 
+# Runtime: O(M*N * 4^L) where M*N = board size, L = max word length.
+#   Trie build: O(W*L) for W words. DFS from each cell: O(M*N) starts × up to 4^L
+#   paths per start (trie prunes invalid branches).
+# Space: O(S + L) — S = total chars in trie (sum of word lengths), L = recursion depth.
 
 class TrieNode:
     def __init__(self):
@@ -15,7 +20,7 @@ class TrieNode:
         cur.is_word = True
 
 class WordSearch2:
-    def find_words(self, board: List[List[str]], words: List[str]) -> bool:
+    def find_words(self, board: List[List[str]], words: List[str]) -> List[str]:
         ROWS = len(board)
         COLS = len(board[0])
 
